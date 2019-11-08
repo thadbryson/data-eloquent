@@ -1,0 +1,34 @@
+{
+    "name": "thadbryson/data",
+    "license": "proprietary",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.3",
+        "illuminate/events": "5.8.*|6.0.*",
+        "highsolutions/eloquent-sequence": "3.4.*",
+        "thadbryson/tools": "dev-master",
+        "roave/security-advisories": "dev-master"
+    },
+    "require-dev": {
+        "codeception/codeception": "3.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Data\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "_generated\\": "tests/_support/_generated/",
+            "Helper\\": "tests/_support/Helper/",
+            "Tests\\Support\\": "tests/_support/",
+            "Tests\\Unit\\": "tests/unit/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-community": "1.0-dev"
+        }
+    }
+}
