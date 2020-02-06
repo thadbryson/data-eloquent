@@ -289,7 +289,7 @@ class BaseModel extends Model
             return null;
         }
 
-        switch ($key) {
+        switch ($this->getCastType($key)) {
 
             case 'collection':
                 return Cast::toCollection($value);

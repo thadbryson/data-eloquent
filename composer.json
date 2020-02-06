@@ -3,11 +3,17 @@
     "license": "proprietary",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../tools"
+        }
+    ],
     "require": {
         "php": ">=7.3",
         "illuminate/events": "5.8.*|6.0.*",
         "highsolutions/eloquent-sequence": "3.4.*",
-        "thadbryson/tools": "dev-master",
+        "thadbryson/tools": "*",
         "roave/security-advisories": "dev-master"
     },
     "require-dev": {
