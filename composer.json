@@ -3,12 +3,6 @@
     "license": "proprietary",
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../tools"
-        }
-    ],
     "require": {
         "php": ">=7.3",
         "illuminate/events": "5.8.*|6.0.*",
