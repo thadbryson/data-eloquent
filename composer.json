@@ -6,7 +6,7 @@
     "require": {
         "php": ">=7.3",
         "illuminate/events": "5.8.*|6.0.*|7.*",
-        "highsolutions/eloquent-sequence": "3.4.*",
+        "highsolutions/eloquent-sequence": "3.6.*",
         "thadbryson/tools": "*",
         "roave/security-advisories": "dev-master"
     },
