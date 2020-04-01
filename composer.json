@@ -1,31 +1,38 @@
 {
-    "name": "thadbryson/data",
-    "license": "proprietary",
+    "name":              "thadbryson/data",
+    "license":           "proprietary",
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "php": ">=7.3",
-        "illuminate/events": "7.*",
-        "thadbryson/tools": "*",
-        "roave/security-advisories": "dev-master"
+    "prefer-stable":     true,
+    "repositories":      [
+        {
+            "type": "github",
+            "url":  "git@github.com:thadbryson/eloquent-sequence.git"
+        }
+    ],
+    "require":           {
+        "php":                          ">=7.3",
+        "thadbryson/eloquent-sequence": "dev-master",
+        "illuminate/events":            "7.*",
+        "thadbryson/tools":             "*",
+        "roave/security-advisories":    "dev-master"
     },
-    "require-dev": {
+    "require-dev":       {
         "codeception/codeception": "4.*"
     },
-    "autoload": {
+    "autoload":          {
         "psr-4": {
             "Data\\": "src/"
         }
     },
-    "autoload-dev": {
+    "autoload-dev":      {
         "psr-4": {
-            "_generated\\": "tests/_support/_generated/",
-            "Helper\\": "tests/_support/Helper/",
+            "_generated\\":     "tests/_support/_generated/",
+            "Helper\\":         "tests/_support/Helper/",
             "Tests\\Support\\": "tests/_support/",
-            "Tests\\Unit\\": "tests/unit/"
+            "Tests\\Unit\\":    "tests/unit/"
         }
     },
-    "extra": {
+    "extra":             {
         "branch-alias": {
             "dev-community": "1.0-dev"
         }
