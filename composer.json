@@ -5,12 +5,12 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.3",
-        "illuminate/events": "5.8.*|6.0.*|7.*",
+        "illuminate/events": "7.*",
         "thadbryson/tools": "*",
         "roave/security-advisories": "dev-master"
     },
     "require-dev": {
-        "codeception/codeception": "3.*"
+        "codeception/codeception": "4.*"
     },
     "autoload": {
         "psr-4": {
