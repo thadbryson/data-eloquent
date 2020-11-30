@@ -5,14 +5,14 @@
     "prefer-stable":     true,
     "repositories":      [
         {
-            "type": "github",
-            "url":  "git@github.com:thadbryson/eloquent-sequence.git"
+            "type": "path",
+            "url":  "../eloquent-sequence"
         }
     ],
     "require":           {
         "php":                          ">=7.3",
         "thadbryson/eloquent-sequence": "dev-master",
-        "illuminate/events":            "7.*",
+        "illuminate/events":            ">=7",
         "thadbryson/tools":             "*",
         "roave/security-advisories":    "dev-master"
     },
