@@ -3,7 +3,7 @@
     "license":           "proprietary",
     "minimum-stability": "dev",
     "prefer-stable":     true,
-    "repositories":      [
+    "_comment":          [
         {
             "type": "path",
             "url":  "../eloquent-sequence"
@@ -14,11 +14,11 @@
         }
     ],
     "require":           {
-        "php":                          ">=7.3",
-        "thadbryson/eloquent-sequence": "dev-master",
-        "illuminate/events":            ">=7",
-        "thadbryson/tools":             "*",
-        "roave/security-advisories":    "dev-latest"
+        "php":                             ">=7.3",
+        "highsolutions/eloquent-sequence": "^3",
+        "illuminate/events":               ">=7",
+        "thadbryson/tools":                "*",
+        "roave/security-advisories":       "dev-latest"
     },
     "require-dev":       {
         "codeception/codeception": "4.*"
