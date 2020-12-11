@@ -7,6 +7,10 @@
         {
             "type": "path",
             "url":  "../eloquent-sequence"
+        },
+        {
+            "type": "path",
+            "url":  "../tools"
         }
     ],
     "require":           {
@@ -14,7 +18,7 @@
         "thadbryson/eloquent-sequence": "dev-master",
         "illuminate/events":            ">=7",
         "thadbryson/tools":             "*",
-        "roave/security-advisories":    "dev-master"
+        "roave/security-advisories":    "dev-latest"
     },
     "require-dev":       {
         "codeception/codeception": "4.*"
