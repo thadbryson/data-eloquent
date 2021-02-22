@@ -16,7 +16,7 @@
     "require":           {
         "php":                             ">=7.3",
         "highsolutions/eloquent-sequence": "^3",
-        "illuminate/events":               ">=7",
+        "illuminate/events":               ">=7.0",
         "thadbryson/tools":                "*",
         "roave/security-advisories":       "dev-latest"
     },
