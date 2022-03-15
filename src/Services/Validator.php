@@ -9,36 +9,20 @@ use Tool\Validation\Result;
 
 class Validator
 {
-    /**
-     * @var BaseModel
-     */
-    protected $model;
+    protected Result $result;
 
-    /**
-     * Data export of BaseModel - data for validation.
-     *
-     * @var array
-     */
-    protected $data;
-
-    public function __construct(BaseModel $model)
+    public function __construct(BaseModel $model, array $rules, array $messages, array $customAttributes)
     {
-        $this->model = $model;
-        $this->data  = $model->attributesToArray();
+        $this->result = \Tool\Validation\Validator::validate(
+            $model->attributesToArray(),
+            $rules,
+            $messages,
+            $customAttributes
+        );
     }
 
-    public function create(): Result
+    public function getResult(): Result
     {
-        return Result::success();
-    }
-
-    public function update(): Result
-    {
-        return Result::success();
-    }
-
-    public function delete(): Result
-    {
-        return Result::success();
+        return $this->result;
     }
 }
