@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace Data\Helpers\Services;
 
 use RuntimeException;
-use Org\Tool\Validation\Assert;
+use Org\Validation\Assert;
 use function class_exists;
 use function get_class;
 

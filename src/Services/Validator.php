@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace Data\Services;
 
 use Data\BaseModel;
-use Org\Tool\Validation\Result;
+use Org\Validation\Result;
 
 class Validator
 {
@@ -13,7 +13,7 @@ class Validator
 
     public function __construct(BaseModel $model, array $rules, array $messages, array $customAttributes)
     {
-        $this->result = \Org\Tool\Validation\Validator::validate(
+        $this->result = \Org\Validation\Validator::validate(
             $model->attributesToArray(),
             $rules,
             $messages,

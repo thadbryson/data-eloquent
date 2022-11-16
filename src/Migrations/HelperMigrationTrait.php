@@ -8,7 +8,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Schema\ColumnDefinition;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Fluent;
-use Org\Tool\Str;
+use Org\Str\Str;
 
 /**
  * Trait HelperMigrationTrait

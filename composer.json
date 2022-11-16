@@ -1,33 +1,46 @@
 {
     "name":              "thadbryson/data",
     "license":           "proprietary",
+
     "_comment":          [
         {
             "type": "path",
             "url":  "../eloquent-sequence"
-        },
+        }
+    ],
+
+    "repositories":      [
         {
             "type": "path",
             "url":  "../org"
         }
     ],
+
     "require":           {
         "php":                             ">=7.3",
 
         "roave/security-advisories":       "dev-latest",
-        
+
+        "thadbryson/org":                  "1.0",
+
         "highsolutions/eloquent-sequence": "^3",
-        "illuminate/events":               ">=7.0",
-        "thadbryson/org":                   "1.0"
+        "illuminate/events":               ">=7.0"
     },
+
     "require-dev":       {
-        "codeception/codeception": "4.*"
+        "codeception/codeception":       "^5.0",
+        "codeception/module-asserts":    "^3.0",
+        "codeception/module-phpbrowser": "^3.0",
+        "mikey179/vfsstream":            "^1.6",
+        "mockery/mockery":               "^1.5"
     },
+
     "autoload":          {
         "psr-4": {
             "Data\\": "src/"
         }
     },
+
     "autoload-dev":      {
         "psr-4": {
             "_generated\\":     "tests/_support/_generated/",
@@ -36,14 +49,17 @@
             "Tests\\Unit\\":    "tests/unit/"
         }
     },
+
     "options":           {
         "symlink": true
     },
-    "extra":             {
-        "branch-alias": {
-            "dev-community": "1.0-dev"
-        }
+
+    "config":            {
+        "preferred-install":   "dist",
+        "sort-packages":       true,
+        "optimize-autoloader": true
     },
+
     "minimum-stability": "dev",
     "prefer-stable":     true,
     "version":           "1.0"

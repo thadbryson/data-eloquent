@@ -11,9 +11,10 @@ use Data\Models\Traits\BaseModel\MakeMethods;
 use Data\Services;
 use Illuminate\Database\Eloquent\Model;
 use InvalidArgumentException;
-use Org\Tool\Cast;
-use Org\Tool\Collection;
-use Org\Tool\Validation\Assert;
+use Org\Cast\Cast;
+use Org\Collection\Collection;
+use Org\Validation\Assert;
+use Org\Validation\Exceptions\ValidationException;
 use function array_key_exists;
 use function class_exists;
 
@@ -176,6 +177,7 @@ class BaseModel extends Model
      * Save Model and return $this for chaining.
      *
      * @param array $options = []
+     *
      * @return $this
      */
     public function saveThis(array $options = [])
@@ -190,8 +192,9 @@ class BaseModel extends Model
      *
      * @param string    $replaceKey
      * @param BaseModel ...$models
+     *
      * @return Collection
-     * @throws \Org\Tool\Validation\Exceptions\ValidationException
+     * @throws ValidationException
      */
     public static function formSetCollection(string $replaceKey, BaseModel ...$models): Collection
     {
@@ -210,7 +213,7 @@ class BaseModel extends Model
                 ->whereIn($replaceKey, $keys)
                 ->get()
                 ->keyBy($replaceKey)
-                ->map(function (BaseModel $model, $key) use (&$given) {
+                ->map(function(BaseModel $model, $key) use (&$given) {
 
                     // Get & remove current BaseModel to update.
                     // So it won't be saved later.
@@ -223,7 +226,7 @@ class BaseModel extends Model
         );
 
         // CREATE new models
-        $given = $given->map(function (BaseModel $model) {
+        $given = $given->map(function(BaseModel $model) {
 
             return $model->saveThis();
         });
@@ -237,6 +240,7 @@ class BaseModel extends Model
      * Set Model's primary key.
      *
      * @param $id
+     *
      * @return $this
      */
     public function setPrimaryKey($id)
@@ -281,6 +285,7 @@ class BaseModel extends Model
      *
      * @param string $key
      * @param mixed  $value
+     *
      * @return mixed
      */
     protected function castAttribute($key, $value)
@@ -315,6 +320,7 @@ class BaseModel extends Model
      * Does Model have this attribute?
      *
      * @param string $key
+     *
      * @return bool
      */
     public function hasAttribute(string $key): bool
@@ -326,6 +332,7 @@ class BaseModel extends Model
      * Return attribute value or throw InvalidArgumentException if attribute does not exist.
      *
      * @param string $key
+     *
      * @return mixed
      * @throws InvalidArgumentException
      */

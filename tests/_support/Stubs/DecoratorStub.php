@@ -11,7 +11,7 @@ namespace Tests\Support\Stubs;
  * @property-read bool   $name
  * @property-read int    $age
  */
-class DecoratorStub extends \Org\Tool\Decorator
+class DecoratorStub extends \Org\Collection\Decorator
 {
     protected function getId(): string
     {

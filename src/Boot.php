@@ -7,8 +7,8 @@ namespace Data;
 use Illuminate\Container\Container;
 use Illuminate\Database\Capsule\Manager;
 use Illuminate\Events\Dispatcher;
-use Org\Tool\Arr;
-use Org\Tool\Validation\Validator;
+use Org\Arr\Arr;
+use Org\Validation\Validator;
 
 /**
  * Class Boot
