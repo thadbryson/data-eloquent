@@ -1,8 +1,6 @@
 {
     "name":              "thadbryson/data",
     "license":           "proprietary",
-    "minimum-stability": "dev",
-    "prefer-stable":     true,
     "_comment":          [
         {
             "type": "path",
@@ -10,15 +8,17 @@
         },
         {
             "type": "path",
-            "url":  "../tools"
+            "url":  "../org"
         }
     ],
     "require":           {
         "php":                             ">=7.3",
+
+        "roave/security-advisories":       "dev-latest",
+        
         "highsolutions/eloquent-sequence": "^3",
         "illuminate/events":               ">=7.0",
-        "thadbryson/tools":                "*",
-        "roave/security-advisories":       "dev-latest"
+        "thadbryson/org":                   "1.0"
     },
     "require-dev":       {
         "codeception/codeception": "4.*"
@@ -36,9 +36,15 @@
             "Tests\\Unit\\":    "tests/unit/"
         }
     },
+    "options":           {
+        "symlink": true
+    },
     "extra":             {
         "branch-alias": {
             "dev-community": "1.0-dev"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable":     true,
+    "version":           "1.0"
 }

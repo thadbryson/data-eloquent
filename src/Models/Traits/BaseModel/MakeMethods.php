@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace Data\Models\Traits\BaseModel;
 
 use Data\BaseModel;
-use Tool\Collection;
+use Org\Tool\Collection;
 
 /**
  * Trait FromMethods

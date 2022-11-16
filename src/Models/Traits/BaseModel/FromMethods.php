@@ -5,11 +5,11 @@ declare(strict_types = 1);
 namespace Data\Models\Traits\BaseModel;
 
 use Data\BaseModel;
-use Tool\Arr;
-use Tool\Collection;
-use Tool\Request;
-use Tool\StrStatic;
-use Tool\Validation\Assert;
+use Org\Tool\Arr;
+use Org\Tool\Collection;
+use Org\Tool\Request;
+use Org\Tool\StrStatic;
+use Org\Tool\Validation\Assert;
 
 /**
  * Trait FromMethods

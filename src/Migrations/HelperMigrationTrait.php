@@ -5,9 +5,10 @@ declare(strict_types = 1);
 namespace Data\Migrations;
 
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Schema\ColumnDefinition;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Fluent;
-use Tool\Str;
+use Org\Tool\Str;
 
 /**
  * Trait HelperMigrationTrait
@@ -172,7 +173,7 @@ trait HelperMigrationTrait
             ->unique();
     }
 
-    protected function addLink(Blueprint $table, string $column = 'link'): Fluent
+    protected function addLink(Blueprint $table, string $column = 'link'): ColumnDefinition
     {
         return $table->string($column, 1024);
     }

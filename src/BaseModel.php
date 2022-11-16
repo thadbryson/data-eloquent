@@ -11,9 +11,9 @@ use Data\Models\Traits\BaseModel\MakeMethods;
 use Data\Services;
 use Illuminate\Database\Eloquent\Model;
 use InvalidArgumentException;
-use Tool\Cast;
-use Tool\Collection;
-use Tool\Validation\Assert;
+use Org\Tool\Cast;
+use Org\Tool\Collection;
+use Org\Tool\Validation\Assert;
 use function array_key_exists;
 use function class_exists;
 
@@ -191,7 +191,7 @@ class BaseModel extends Model
      * @param string    $replaceKey
      * @param BaseModel ...$models
      * @return Collection
-     * @throws \Tool\Validation\Exceptions\ValidationException
+     * @throws \Org\Tool\Validation\Exceptions\ValidationException
      */
     public static function formSetCollection(string $replaceKey, BaseModel ...$models): Collection
     {

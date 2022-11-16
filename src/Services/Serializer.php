@@ -5,8 +5,8 @@ declare(strict_types = 1);
 namespace Data\Services;
 
 use Data\BaseModel;
-use Tool\Arr;
-use Tool\Collection;
+use Org\Tool\Arr;
+use Org\Tool\Collection;
 use function is_numeric;
 
 class Serializer

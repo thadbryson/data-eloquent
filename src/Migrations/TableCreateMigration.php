@@ -68,6 +68,11 @@ abstract class TableCreateMigration extends Migration
     protected $meta = false;
 
     /**
+     * URL link
+     */
+    protected $link = false;
+
+    /**
      * Datetime columns to create. Default NULL.
      *
      * @var string[]
@@ -77,6 +82,11 @@ abstract class TableCreateMigration extends Migration
     protected $timestamps = true;
 
     protected $softDeletes = false;
+
+    public function __construct()
+    {
+
+    }
 
     /**
      * Additional columns to create.
@@ -122,6 +132,10 @@ abstract class TableCreateMigration extends Migration
 
             if ($this->meta) {
                 $this->addMeta($table);
+            }
+
+            if ($this->link) {
+                $this->addLink($table);
             }
 
             $this->columns($table);

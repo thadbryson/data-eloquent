@@ -10,7 +10,7 @@ use InvalidArgumentException;
 use Tests\Support\Stubs\DecoratorStub;
 use Tests\Support\Stubs\RepositoryStub;
 use Tests\Support\Stubs\UserModelCustom;
-use Tool\Decorator;
+use Org\Tool\Decorator;
 use UnitTester;
 
 class BaseModelTest extends \Codeception\Test\Unit

@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Data\Services;
 
-use Tool\Arr;
+use Org\Tool\Arr;
 use function array_intersect;
 
 class SerializerApi extends Serializer

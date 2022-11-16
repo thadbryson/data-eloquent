@@ -7,7 +7,7 @@ namespace Data\Models\Api;
 use Carbon\Carbon;
 use Data\BaseModel;
 use Data\Models\Traits\Singleton;
-use Tool\Arr;
+use Org\Tool\Arr;
 
 /**
  * Class Oauth2

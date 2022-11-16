@@ -8,9 +8,9 @@ use Data\BaseModel;
 use Data\Exceptions\ModelNotFound;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Tool\Arr;
-use Tool\Request;
-use Tool\Validation\Assert;
+use Org\Tool\Arr;
+use Org\Tool\Request;
+use Org\Tool\Validation\Assert;
 use function array_search;
 use function is_array;
 
@@ -93,11 +93,11 @@ class Repository
         return $found;
     }
 
-    public function findCodesAll(...$codes): \Tool\Collection
+    public function findCodesAll(...$codes): \Org\Tool\Collection
     {
-        $codes = \Tool\Collection::make($codes)->castString()->all();
+        $codes = \Org\Tool\Collection::make($codes)->castString()->all();
 
-        return new \Tool\Collection(
+        return new \Org\Tool\Collection(
             $this->query()
                 ->whereIn($this->code, $codes)
                 ->get()
@@ -296,7 +296,7 @@ class Repository
 
     public function replaceAll(string $code, BaseModel ...$models): Collection
     {
-        return \Tool\Collection::make($models)
+        return \Org\Tool\Collection::make($models)
             ->map(function (BaseModel $model) use ($code) {
 
                 return $this->replaceWith($code, $model);

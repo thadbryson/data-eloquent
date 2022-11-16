@@ -5,8 +5,8 @@ declare(strict_types = 1);
 namespace Data\Models\Traits;
 
 use Data\BaseModel;
-use Tool\Validation\Result;
-use Tool\Validation\Validator;
+use Org\Tool\Validation\Result;
+use Org\Tool\Validation\Validator;
 use function array_replace_recursive;
 use function property_exists;
 
