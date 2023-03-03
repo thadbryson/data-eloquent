@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Data\Helpers\Services;
+namespace Thad\Data\Helpers\Services;
 
 class Factory
 {

@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Tests\Support\Stubs;
 
-use Data\BaseModel;
+use Thad\Data\BaseModel;
 
 /**
  * Class UserModel

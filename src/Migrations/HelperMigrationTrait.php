@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Data\Migrations;
+namespace Thad\Data\Migrations;
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Schema\ColumnDefinition;

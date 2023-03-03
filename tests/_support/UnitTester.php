@@ -3,7 +3,7 @@
 declare(strict_types = 1);
 
 use _generated\UnitTesterActions;
-use Data\Boot;
+use Thad\Data\Boot;
 
 /**
  * Inherited Methods

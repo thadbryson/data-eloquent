@@ -21,7 +21,7 @@
 
         "roave/security-advisories":       "dev-latest",
 
-        "thadbryson/org":                  "1.0",
+        "thadbryson/org":                  "*",
 
         "highsolutions/eloquent-sequence": "^3",
         "illuminate/events":               ">=7.0"
@@ -37,7 +37,7 @@
 
     "autoload":          {
         "psr-4": {
-            "Data\\": "src/"
+            "Thad\\Data\\": "src/"
         }
     },
 

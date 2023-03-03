@@ -2,13 +2,13 @@
 
 declare(strict_types = 1);
 
-namespace Data;
+namespace Thad\Data;
 
 use Carbon\CarbonInterval;
-use Data\Helpers\Services\Factory;
-use Data\Models\Traits\BaseModel\FromMethods;
-use Data\Models\Traits\BaseModel\MakeMethods;
-use Data\Services;
+use Thad\Data\Helpers\Services\Factory;
+use Thad\Data\Models\Traits\BaseModel\FromMethods;
+use Thad\Data\Models\Traits\BaseModel\MakeMethods;
+use Thad\Data\Services;
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
 use InvalidArgumentException;

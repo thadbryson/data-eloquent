@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Data\Services;
+namespace Thad\Data\Services;
 
 use Org\Arr\Arr;
 use function array_intersect;

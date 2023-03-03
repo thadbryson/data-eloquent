@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Data\Helpers\Services;
+namespace Thad\Data\Helpers\Services;
 
 use RuntimeException;
 use Org\Validation\Assert;
@@ -30,7 +30,7 @@ class Finder
     {
         $this->id = $id;
 
-        $this->baseClass    = '\\Data\\Services\\' . $this->id;
+        $this->baseClass    = '\\Thad\Data\\Services\\' . $this->id;
         $this->siblingClass = get_class($this->model) . '\\' . $this->id;
 
         return $this;

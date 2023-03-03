@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Data;
+namespace Thad\Data;
 
 use Illuminate\Container\Container;
 use Illuminate\Database\Capsule\Manager;

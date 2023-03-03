@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Data\Models\Traits;
+namespace Thad\Data\Models\Traits;
 
-use Data\BaseModel;
+use Thad\Data\BaseModel;
 use Org\Validation\Result;
 use Org\Validation\Validator;
 use function array_replace_recursive;

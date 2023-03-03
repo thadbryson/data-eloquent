@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Data\Enums;
+namespace Thad\Data\Enums;
 
 class ColumnSizes
 {

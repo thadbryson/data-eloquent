@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Data\Models\Cms;
+namespace Thad\Data\Models\Cms;
 
-use Data\BaseModel;
-use Data\Models\Traits;
+use Thad\Data\BaseModel;
+use Thad\Data\Models\Traits;
 use HighSolutions\EloquentSequence\Sequence;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 

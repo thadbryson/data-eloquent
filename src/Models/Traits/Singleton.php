@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Data\Models\Traits;
+namespace Thad\Data\Models\Traits;
 
-use Data\BaseModel;
+use Thad\Data\BaseModel;
 
 /**
  * Trait Singleton

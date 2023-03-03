@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Data\Models;
+namespace Thad\Data\Models;
 
-use Data\BaseModel;
+use Thad\Data\BaseModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**

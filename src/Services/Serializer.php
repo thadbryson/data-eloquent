@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Data\Services;
+namespace Thad\Data\Services;
 
-use Data\BaseModel;
+use Thad\Data\BaseModel;
 use Org\Arr\Arr;
 use Org\Collection\Collection;
 use function is_numeric;

@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace Data\Models\Api;
+namespace Thad\Data\Models\Api;
 
 use Carbon\Carbon;
-use Data\BaseModel;
-use Data\Models\Traits\Singleton;
+use Thad\Data\BaseModel;
+use Thad\Data\Models\Traits\Singleton;
 use Org\Arr\Arr;
 
 /**

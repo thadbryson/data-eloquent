@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Tests\Unit\Repositories;
 
-use Data\Services\Repository;
+use Thad\Data\Services\Repository;
 use Tests\Support\Stubs\UserModel;
 use UnitTester;
 

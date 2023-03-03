@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Data\Services;
+namespace Thad\Data\Services;
 
-use Data\BaseModel;
-use Data\Exceptions\ModelNotFound;
+use Thad\Data\BaseModel;
+use Thad\Data\Exceptions\ModelNotFound;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Org\Arr\Arr;
@@ -204,7 +204,7 @@ class Repository
             ->keys();
 
         if ($notFound->isNotEmpty()) {
-            throw new ModelNotFound('Data not found with ids: ' . implode(', ', $notFound->all()));
+            throw new ModelNotFound('Thad\Data not found with ids: ' . implode(', ', $notFound->all()));
         }
 
         return $found;

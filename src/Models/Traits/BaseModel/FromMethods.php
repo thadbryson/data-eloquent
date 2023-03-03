@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Data\Models\Traits\BaseModel;
+namespace Thad\Data\Models\Traits\BaseModel;
 
-use Data\BaseModel;
+use Thad\Data\BaseModel;
 use Org\Arr\Arr;
 use Org\Collection\Collection;
 use Org\Tool\Request;

@@ -4,8 +4,8 @@ declare(strict_types = 1);
 
 namespace Tests\Unit;
 
-use Data\Exceptions\ModelNotFound;
-use Data\Services\Repository;
+use Thad\Data\Exceptions\ModelNotFound;
+use Thad\Data\Services\Repository;
 use InvalidArgumentException;
 use Tests\Support\Stubs\DecoratorStub;
 use Tests\Support\Stubs\RepositoryStub;
@@ -135,7 +135,7 @@ class BaseModelTest extends \Codeception\Test\Unit
         $found = UserModelCustom::findOrFail(1);
         $this->assertEquals(UnitTester::USERS_TABLE[0], $found->toArray());
 
-        $this->expectExceptionObject(new ModelNotFound('Data could not be found.'));
+        $this->expectExceptionObject(new ModelNotFound('Thad\Data could not be found.'));
 
         UserModelCustom::findOrFail(99);
     }
@@ -196,7 +196,7 @@ class BaseModelTest extends \Codeception\Test\Unit
 
         $this->assertCount(4, $found, 'All 4 results found. No Excpetion thrown.');
 
-        $this->expectExceptionObject(new ModelNotFound('Data not found with ids: 9, 0, 11'));
+        $this->expectExceptionObject(new ModelNotFound('Thad\Data not found with ids: 9, 0, 11'));
         UserModelCustom::findManyOrFail([1, 3, 5, 7, 9, 0, 11]);
     }
 }

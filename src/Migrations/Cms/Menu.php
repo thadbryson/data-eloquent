@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Data\Migrations\Cms;
+namespace Thad\Data\Migrations\Cms;
 
-use Data\Migrations\HelperMigrationTrait;
-use Data\Migrations\TableCreateMigration;
+use Thad\Data\Migrations\HelperMigrationTrait;
+use Thad\Data\Migrations\TableCreateMigration;
 use Illuminate\Database\Schema\Blueprint;
 
 abstract class Menu extends TableCreateMigration
