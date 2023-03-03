@@ -11,8 +11,8 @@
 
     "repositories":      [
         {
-            "type": "path",
-            "url":  "../org"
+            "type": "vcs",
+            "url":  "git@bitbucket.org:thadbry/org.git"
         }
     ],
 
