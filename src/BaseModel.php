@@ -9,6 +9,7 @@ use Data\Helpers\Services\Factory;
 use Data\Models\Traits\BaseModel\FromMethods;
 use Data\Models\Traits\BaseModel\MakeMethods;
 use Data\Services;
+use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
 use InvalidArgumentException;
 use Org\Cast\Cast;
@@ -288,7 +289,7 @@ class BaseModel extends Model
      *
      * @return mixed
      */
-    protected function castAttribute($key, $value)
+    protected function castAttribute($key, $value): mixed
     {
         if ($value === null) {
             return null;
@@ -297,31 +298,27 @@ class BaseModel extends Model
         switch ($this->getCastType($key)) {
 
             case 'collection':
-                return Cast::toCollection($value);
+                return Cast::execute('collection', $value);
 
             case 'datetime':
-                return Cast::toDateTime($value);
+                return $this->asDateTime($value);
 
             case 'bool':
             case 'boolean':
-                return Cast::toBoolean($value);
+                return Cast::execute('bool', $value);
 
             default:
                 return parent::castAttribute($key, $value);
         }
     }
 
-    protected function asDateTime($value)
+    protected function asDateTime(mixed $value): DateTimeInterface
     {
-        return Cast::toDateTime($value);
+        return Cast::execute('datetime', $value);
     }
 
     /**
      * Does Model have this attribute?
-     *
-     * @param string $key
-     *
-     * @return bool
      */
     public function hasAttribute(string $key): bool
     {
@@ -330,13 +327,9 @@ class BaseModel extends Model
 
     /**
      * Return attribute value or throw InvalidArgumentException if attribute does not exist.
-     *
-     * @param string $key
-     *
-     * @return mixed
      * @throws InvalidArgumentException
      */
-    public function assertAttribute(string $key)
+    public function assertAttribute(string $key): mixed
     {
         Assert::true($this->hasAttribute($key), sprintf('Attribute "%s" not found on Model %s', $key, static::class));
 

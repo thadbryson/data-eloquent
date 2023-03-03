@@ -38,7 +38,7 @@ trait FromMethods
      */
     public static function fromMap(array $attributes, array $map): BaseModel
     {
-        $attributes = Arr::mapOnly($attributes, $map);
+        $attributes = Arr::rearrange($attributes, $map);
 
         return static::make($attributes);
     }
